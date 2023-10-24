@@ -4,11 +4,12 @@ import { Fragment } from 'react';
 import UsFlag from './assets/us.jpg';
 import BrFlag from './assets/brasil.png';
 import Header from './components/header/header';
-
+import './styles/home.scss';
 
 function App() {
   return (
     <Fragment>
+      <main className='container'>
         <Header />
         <div className='experience'>
           <h3>Experience</h3>
@@ -39,8 +40,10 @@ function App() {
             </div>
           </div>
         </div>
+      </main>
 
-     
+
+
 
     </Fragment>
 
