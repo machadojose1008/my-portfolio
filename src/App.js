@@ -5,6 +5,7 @@ import './styles/home.scss';
 import Experience from './components/experience/experience';
 import Information from './components/information/information';
 import EmailIcon from './components/icons/email-icon';
+import SocialBtns from './components/social-btns/social-btns';
 
 
 
@@ -16,7 +17,8 @@ function App() {
         <Experience />
         <Information />
         <div className='buttons'>
-          <div className='social'></div>
+          <SocialBtns />
+          
           <button className='primary-btn'>
             contact me! 
            <EmailIcon />

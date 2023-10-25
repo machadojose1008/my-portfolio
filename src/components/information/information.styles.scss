@@ -4,6 +4,8 @@
     align-items: flex-start;
     width: 100%;
     gap:24px;
+    grid-area: info;
+    max-width: 500px;
 
     .languages-info {
         display: flex;
