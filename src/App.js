@@ -3,6 +3,10 @@ import { Fragment } from 'react';
 import Header from './components/header/header';
 import './styles/home.scss';
 import Experience from './components/experience/experience';
+import Information from './components/information/information';
+import EmailIcon from './components/icons/email-icon';
+
+
 
 function App() {
   return (
@@ -10,13 +14,13 @@ function App() {
       <main className='container'>
         <Header />
         <Experience />
-        <div className='educational-div'>
-          <span>Image</span>
-          <span>Software Engineer Bachelors Degree - Centro Universitário da Grande Dourados</span>
-        </div>
+        <Information />
         <div className='buttons'>
           <div className='social'></div>
-          <button>contact me!</button>
+          <button className='primary-btn'>
+            contact me! 
+           <EmailIcon />
+          </button>
         </div>
 
 
