@@ -23,8 +23,7 @@ const Information = () => {
                 <SectionTitle text="Education" />
 
                 <div className='educational-info'>
-                    <span>Image</span>
-                    <span>Software Engineer Bachelors Degree - Centro Universitário da Grande Dourados</span>
+                    <p>🎓 Software Engineer Bachelors Degree - Centro Universitário da Grande Dourados</p>
                 </div>
             </div>
         </div>

@@ -19,10 +19,10 @@ function App() {
         <div className='buttons'>
           <SocialBtns />
           
-          <button className='primary-btn'>
+          <a className='primary-btn' href='mailto:jgbm81@hotmail.com'>
             contact me! 
            <EmailIcon />
-          </button>
+          </a>
         </div>
 
 
