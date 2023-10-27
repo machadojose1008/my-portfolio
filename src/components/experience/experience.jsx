@@ -1,14 +1,21 @@
 
 import './experience.styles.scss';
 import SectionTitle from '../sectionTitle/sectionTitle';
+import { Image } from 'react-bootstrap';
+import MinhaFoto from '../../assets/me.png';
 const Experience = () => {
 
     return (
         <div className='experience'>
-            <SectionTitle text='Experience' />
-            <p>Excepteur non excepteur est non deserunt excepteur deserunt. Ad in est esse cupidatat ipsum cillum ipsum eiusmod occaecat sit proident aute. Qui reprehenderit ea aliquip esse proident reprehenderit quis. Consectetur mollit qui in sit non non dolor minim. Ipsum voluptate in do eiusmod consectetur proident fugiat in eu amet magna culpa quis. In labore dolor veniam voluptate duis reprehenderit. Nisi aute fugiat ut veniam elit. Nostrud mollit qui sunt mollit.</p>
-            
-            
+            <Image src={MinhaFoto} width={325} height={277} />
+            <div className='description'>
+                <SectionTitle text='Desenvolvedor Front-end' />
+                <p>Sou um Engenheiro de Software com um desejo insaciável de crescimento e inovação. Com uma sólida base em tecnologias web e um olhar aguçado para detalhes, estou pronto para mergulhar de cabeça em projetos desafiadores que me permitirão crescer ainda mais no mundo da engenharia de software. </p>
+
+            </div>
+
+
+
         </div>
     )
 }
