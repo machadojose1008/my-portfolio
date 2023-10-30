@@ -1,15 +1,8 @@
 .container {
     padding: 40px 32px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap:24px;
     justify-items: center;
-    grid-template-areas: 
-    "navBar"
-    "experience"
-    "tecnologies"
-    "projects"
-    "btns";
+    
 
     .buttons {
         display: flex;
@@ -17,7 +10,6 @@
         justify-content: center;
         flex-direction: column;
         gap: 24px;
-        grid-area: btns;
         width: 100%;
 
         .primary-btn {
@@ -44,19 +36,12 @@
 
 @media (min-width: 1080px){
     .container {
-        padding: 90px 50px;
         height: 100vh;
-        grid-template-rows: fit-content(100%) ;
         flex-direction: column;
         display: flex;
         align-items: center;
         justify-items: center;
-        grid-template-areas: 
-        "navBar"
-        "experience" 
-        "tecnologies"
-        "projects"
-        "btns"
+       
         ;
     }
 }

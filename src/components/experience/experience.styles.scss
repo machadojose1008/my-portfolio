@@ -1,14 +1,12 @@
 .experience {
     padding-top: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-area: experience;
+
     gap: 24px;
     max-width: 900px;
 
     img {
         border-radius: 24px;
+        max-width: 250px;
     }
 
     p {
@@ -20,8 +18,11 @@
     }
 
     @media (min-width: 1080px) {
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
+        display: flex;
         img{
+            max-width: 100%;
             border-radius: 100%;
             border: 2px solid white;
         }
