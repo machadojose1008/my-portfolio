@@ -1,4 +1,8 @@
 import './App.scss';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 import { Fragment } from 'react';
 import './styles/home.scss';
 import Experience from './components/experience/experience';
@@ -19,28 +23,30 @@ function App() {
       <NavigationBar />
       <main className='container'>
      
-        <Grid container spacing={2} >
+        <Grid container spacing={4} >
           <Grid item xs={12} display='flex' justifyContent='center' >
             <Experience />
           </Grid>
           <Grid item xs={12} display='flex' justifyContent='center'>
             <Tecnologies />
           </Grid>
-
-
+        <div className='divider-container'>
+          <div className='divider'></div>
+        </div>
+          
           <Projects />
         </Grid>
 
 
 
-        <div className='buttons'>
+        {/* <div className='buttons'>
           <SocialBtns />
           <a className='primary-btn' href='mailto:jgbm81@hotmail.com'>
             contact me!
             <EmailIcon />
           </a>
         </div>
-
+ */}
 
       </main>
 

@@ -1,6 +1,16 @@
+.divider-container {
+  padding: 70px;
+  width: 60%;
+  margin: 0 auto;
 
+
+  .divider {
+    height: 2px;
+    background-color: black;
+  }
+
+}
 
 .App {
   text-align: center;
 }
-

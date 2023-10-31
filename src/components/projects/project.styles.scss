@@ -1,7 +1,10 @@
 .project {
+    h3 {
+        display: flex;
+    }
 
     .nome-projeto {
-       
+
         margin-block-start: 1em;
         margin-block-end: 1em;
         margin-inline-start: 0px;
@@ -14,4 +17,39 @@
         letter-spacing: .14rem;
         cursor: pointer;
     }
+
+    .project-image {
+        border: 1px solid black;
+        transition: transform 0.3s, box-shadow 0.3s;
+        transform-origin: center center;
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+
+        &:hover {
+            transform: scale(1.1);
+            /* Zoom in 5% */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            /* Mais sombra */
+        }
+
+
+    }
+
+    @media (max-width: 900px){
+        text-align: left;
+        max-width: 90%;
+    }
+
+    @media (max-width: 560px){
+        .project-image{
+            font-size: 9px;
+            width: 90%;
+            height: auto;
+        }
+    }
+
+
 }
+
