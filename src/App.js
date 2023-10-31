@@ -11,17 +11,19 @@ import { Grid } from '@mui/material';
 
 
 
-
 function App() {
+
+
   return (
     <Fragment>
       <NavigationBar />
       <main className='container'>
+     
         <Grid container spacing={2} >
           <Grid item xs={12} display='flex' justifyContent='center' >
             <Experience />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={12} display='flex' justifyContent='center'>
             <Tecnologies />
           </Grid>
 
