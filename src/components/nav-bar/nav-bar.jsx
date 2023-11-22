@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { AppBar, Box, Button, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link, Outlet } from 'react-router-dom';
 
 const drawerWidth = 240;
 
 const navItems = [
-    { name: 'Projetos', link: '/projetos' },
-    { name: 'Sobre mim', link:'/sobremim'},
-    { name: 'Contato', link:'/contato'}
+    /* { name: 'Projetos', link: '/projetos' },
+    { name: 'Sobre mim', link:'/sobremim'}, */
+    { name: 'Contato', link: '/contact' }
 ]
 
 
@@ -19,15 +20,20 @@ const NavigationBar = () => {
         setMobileOpen(!mobileOpen);
     };
 
+
+
     const drawer = (
-        <Box onClick={toggleMenu} sx={{ textAlign: 'center'}}>
+        <Box onClick={toggleMenu} sx={{ textAlign: 'center' }}>
 
             <Divider />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.name} disablePadding >
                         <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item.name} />
+                            <Link to={item.link} >
+                                <ListItemText primary={item.name} />
+                            </Link>
+
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -39,6 +45,7 @@ const NavigationBar = () => {
 
 
     return (
+        <Fragment >
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar component='nav' enableColorOnDark sx={{ backgroundColor: '#000' }}>
@@ -60,11 +67,14 @@ const NavigationBar = () => {
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item.name}  sx={{ color: '#fff' }} onClick={() => {
-                                console.log(item.link); // TODO: FAZER O LINK PARA A PÁGINA COM INFORMAÇÕES
-                            }}>
-                                {item.name}
-                            </Button>
+                             <ListItem key={item.name} disablePadding>
+                             <ListItemButton sx={{ textAlign: 'center' }}>
+                               {/* Use o componente Link do react-router-dom para redirecionar para a rota desejada */}
+                               <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                 <ListItemText primary={item.name} />
+                               </Link>
+                             </ListItemButton>
+                           </ListItem>
                         ))}
                     </Box>
                 </Toolbar>
@@ -86,9 +96,11 @@ const NavigationBar = () => {
                 >
                     {drawer}
                 </Drawer>
-               
+
             </nav>
         </Box>
+        <Outlet />
+        </Fragment>
     )
 }
 

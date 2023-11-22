@@ -18,12 +18,13 @@ import Formation from './components/about-me/formation';
 function App() {
 
 
+
   return (
     <Fragment>
       <NavigationBar />
       <main className='container'>
 
-        <Grid container spacing={4} >
+        <Grid  spacing={4} >
           <Grid item xs={12} display='flex' justifyContent='center' >
             <Experience />
           </Grid>
