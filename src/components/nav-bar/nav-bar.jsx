@@ -46,60 +46,66 @@ const NavigationBar = () => {
 
     return (
         <Fragment >
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
-            <AppBar component='nav' enableColorOnDark sx={{ backgroundColor: '#000' }}>
+            <Box sx={{ display: 'flex' }}>
+                <CssBaseline />
+                <AppBar component='nav' enableColorOnDark sx={{ backgroundColor: '#000' }}>
 
-                <Toolbar>
-                    <IconButton
-                        color='inherit'
-                        aria-label='open drawer'
-                        edge='start'
-                        onClick={toggleMenu}
-                        sx={{ mr: 2, display: { sm: 'none' } }}>
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography
-                        variant='h6'
-                        component='div'
-                        sx={{ flexGrow: 1, display: { sm: 'block' } }}>
-                        José Machado
-                    </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                             <ListItem key={item.name} disablePadding>
-                             <ListItemButton sx={{ textAlign: 'center' }}>
-                               {/* Use o componente Link do react-router-dom para redirecionar para a rota desejada */}
-                               <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                 <ListItemText primary={item.name} />
-                               </Link>
-                             </ListItemButton>
-                           </ListItem>
-                        ))}
-                    </Box>
-                </Toolbar>
-            </AppBar>
-            <nav>
+                    <Toolbar>
+                        <IconButton
+                            color='inherit'
+                            aria-label='open drawer'
+                            edge='start'
+                            onClick={toggleMenu}
+                            sx={{ mr: 2, display: { sm: 'none' } }}>
+                            <MenuIcon />
+                        </IconButton>
 
-                <Drawer
-                    container={container}
-                    variant='temporary'
-                    open={mobileOpen}
-                    onClose={toggleMenu}
-                    ModalProps={{
-                        keepMounted: true,
-                    }}
-                    sx={{
-                        display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-                    }}
-                >
-                    {drawer}
-                </Drawer>
+                        <Typography
+                            variant='h6'
+                            component='div'
+                            sx={{ flexGrow: 1, display: { sm: 'block' } }}>
+                            <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                José Machado</Link>
+                        </Typography>
 
-            </nav>
-        </Box>
-        <Outlet />
+
+                        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+
+
+                            {navItems.map((item) => (
+                                <ListItem key={item.name} disablePadding>
+                                    <ListItemButton sx={{ textAlign: 'center' }}>
+                                        {/* Use o componente Link do react-router-dom para redirecionar para a rota desejada */}
+                                        <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                            <ListItemText primary={item.name} />
+                                        </Link>
+                                    </ListItemButton>
+                                </ListItem>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </AppBar>
+                <nav>
+
+                    <Drawer
+                        container={container}
+                        variant='temporary'
+                        open={mobileOpen}
+                        onClose={toggleMenu}
+                        ModalProps={{
+                            keepMounted: true,
+                        }}
+                        sx={{
+                            display: { xs: 'block', sm: 'none' },
+                            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        }}
+                    >
+                        {drawer}
+                    </Drawer>
+
+                </nav>
+            </Box>
+            <Outlet />
         </Fragment>
     )
 }
